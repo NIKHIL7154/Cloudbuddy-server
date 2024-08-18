@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://playstud:nikhilthakur@cloudbuddy-data.rdj6n.mongodb.net/?retryWrites=true&w=majority&appName=CloudBuddy-data",{
+mongoose.connect(process.env.MongoDbUrl,{
     
     
 }).then().catch((err)=>{
