@@ -25,7 +25,7 @@ route.post("/addwebsite",verifytoken, async (req,res)=>{
     const data= req.body.data
     
     const payload={...data,...req.authdata,endpoint:HostLink+data.webid}
-    console.log(payload)
+    
     if(await addWebsiteToDatabase(payload)){
         res.json({status:"success",message:"Website added successfully",endpoint:HostLink+data.webid})
         return

@@ -19,7 +19,7 @@ route.post("/getAccessToken", async (req, res) => {
         })
         .then(async (userdata) => {
             const {data}=userdata
-            console.log(data)
+            
             const payload={
                 name:data.name,
                 email:data.email,

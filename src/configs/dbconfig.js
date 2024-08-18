@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb://localhost:27017/cloudbuddy",{
-    serverSelectionTimeoutMS:4000
+mongoose.connect("mongodb+srv://playstud:nikhilthakur@cloudbuddy-data.rdj6n.mongodb.net/?retryWrites=true&w=majority&appName=CloudBuddy-data",{
+    
+    
 }).then().catch((err)=>{
     console.log(err)
 })
@@ -10,6 +11,7 @@ mongoose.connection.on("connected",()=>{
 })
 
 mongoose.connection.on("error",(err)=>{
+
     console.log(err)
 })
 

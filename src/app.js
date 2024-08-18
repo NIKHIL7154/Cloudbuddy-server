@@ -12,7 +12,7 @@ const { verifytoken } = require('./middle/authverify');
 
 const app= express();
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:"https://cloudbuddy.vercel.app"
 }));
 app.use(express.json());
 

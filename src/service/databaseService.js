@@ -10,14 +10,14 @@ async function addWebsiteToDatabase(info){
         );
 
         if (!updatedDocument) {
-            console.log(`Document with ID ${updatedDocument._id} not found.`);
+            
             return false;
         }
 
-        console.log(`Object added to items array:`, updatedDocument);
+        console.log(`Object added to items array:`);
         return true;
     } catch (error) {
-        console.error('Error updating document:', error);
+        console.error('Error updating document:');
         return false;
     }
 }

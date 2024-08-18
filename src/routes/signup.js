@@ -5,7 +5,7 @@ const route = express.Router()
 
 route.post('/signup',async (req,res)=>{
     const user= await createUser(req.body)
-    console.log(user)
+    
     switch (user.status) {
         case 12:
             res.status(204).send({message:"User Already Exist"});
